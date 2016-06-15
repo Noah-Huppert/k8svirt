@@ -78,13 +78,9 @@ func main() {
 		mux.HandleFunc(config.Path, func(w http.ResponseWriter, r *http.Request) {
 			logger.Printf("    [%v] %v => %v", r.Method, r.URL, config.Server)
 
-			logger.SetPrefix(LOGGER_PREFIX + "        ")
-
 			proxy := httputil.NewSingleHostReverseProxy(serverUrl)
 			proxy.ErrorLog = logger
 			proxy.ServeHTTP(w, r)
-			
-			logger.SetPrefix(LOGGER_PREFIX)
 		})
 	}
 
