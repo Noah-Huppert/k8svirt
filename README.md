@@ -1,6 +1,6 @@
 Project Status: Complete | Adding features when needed
 # k8svirt
-A simple reverse proxy which emulates the behavior of a k8s cluster.
+A simple reverse proxy which emulates the behavior of a Kubernetes cluster.
 
 # usage
 ```
